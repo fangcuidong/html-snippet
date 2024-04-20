@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script type="module">
+  import list from './data.js';
+
+  let ul = document.createElement('ul');
+
+  list.forEach(item => {
+    let li = document.createElement('li');
+    let a = document.createElement('a');
+    a.textContent = item.title;
+    a.href = item.url;
+    li.appendChild(a);
+    ul.appendChild(li);
+  });
+
+  document.body.appendChild(ul);
+</script>
+
+</html>
